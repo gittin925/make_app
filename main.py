@@ -4,9 +4,8 @@ import streamlit as st
 file_path = "sample.py"  # ここに表示したいファイル名を指定
 
 st.title("コード共有")
-st.subheader("ファイル名")
 filename="test.py"
-st.write(filename)
+st.write(f"ファイル名：{filename}")
 
 try:
     with open(file_path, "r", encoding="utf-8") as f:
