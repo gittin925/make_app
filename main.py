@@ -17,10 +17,13 @@
 import os
 import streamlit as st
 
+st.title("プログラム共有ページ")
+
 files = [f for f in os.listdir("pages") if f.endswith(".py")]
 if "main.py" in files:
     files.remove("main.py")
 selected_file = st.selectbox("表示するPythonファイルを選択", files)
+st.write("各ページでプログラムの動作を確認可能")
 
 try:
     selected_file=os.path.join("pages",selected_file)
